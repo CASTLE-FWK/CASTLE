@@ -1,0 +1,146 @@
+/**
+ * https://github.com/szym/display
+ * Copyright (c) 2014, Szymon Jakubczak (MIT License)
+ */
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-family: "DejaVu Sans Mono", "Liberation Mono", "Menlo", "Monaco", monospace;
+}
+
+html {
+  background: #333;
+}
+
+.window {
+  overflow: hidden;
+  box-sizing: border-box;
+  padding-top: 18px;
+  border: #555 solid 0px;
+  background: #FFF;
+  border-radius: 0px;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  min-width: 200px;
+  min-height: 100px;
+  z-index: 1000;
+  box-shadow: rgba(0, 0, 0, 0.3) 2px 2px 20px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.3) 2px 2px 20px;
+  -moz-box-shadow: rgba(0, 0, 0, 0.3) 2px 2px 20px;
+}
+
+.maximized .window {
+  border: none;
+  box-shadow: none;
+}
+
+.bar {
+  position: absolute;
+  border-bottom: #aaa solid 1px;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 15px;
+  padding: 1px;
+  color: #333;
+  z-index: 10;
+}
+
+button {
+  border: none;
+  font-size: 18px;
+  line-height: 14px;
+  cursor: pointer;
+}
+
+button:hover {
+  font-weight: bold;
+  color:#CC0000;
+}
+
+.bar button {
+  background: transparent;
+  margin: 0 4px;
+  float: right;
+}
+
+#status {
+  padding: 5px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#status.online {
+  background: #8f8;
+}
+
+#status.offline {
+  background: #f88;
+}
+
+.title {
+  position: absolute;
+  left: 5px;
+  top: 2px;
+  font-size: 13px;
+  font-weight: bold;
+  cursor: default;
+  -webkit-user-select: none;
+  -moz-user-select: -moz-none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.grip {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 20px;
+  height: 20px;
+  cursor: se-resize;
+  background: transparent;
+  z-index: 10;
+}
+
+.content {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.labels {
+  position: absolute;
+}
+
+.label {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 80%;
+}
+
+.content-image {
+  image-rendering: pixelated;
+}
+
+.window-plot {
+  min-width: 300px;
+  min-height: 200px;
+}
+
+.content-plot {
+  background: white;
+}
+
+.dygraph-label {
+  font-size: 90%;
+}
+
+.dygraph-axis-label {
+  font-size: 90%;
+}
